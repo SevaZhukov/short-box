@@ -1,0 +1,63 @@
+import com.android.build.gradle.AppPlugin
+import com.android.build.gradle.LibraryPlugin
+
+buildscript {
+    ext.kotlin_version = "1.4.21"
+    ext.nav_version = "2.3.2"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+subprojects {
+    if (project.name == "app") {
+        apply plugin: "com.android.application"
+        apply plugin: AppPlugin
+    } else {
+        apply plugin: "com.android.library"
+        apply plugin: LibraryPlugin
+    }
+
+    apply plugin: 'kotlin-android'
+    apply plugin: "kotlin-android-extensions"
+
+    sourceSets {
+        main.java.srcDirs += ["src/main/kotlin"]
+        test.java.srcDirs += ["src/test/kotlin"]
+        androidTest.java.srcDirs += ["src/androidTest/kotlin"]
+    }
+
+    android {
+
+        defaultConfig {
+            compileSdkVersion 30
+            buildToolsVersion "30.0.2"
+            minSdkVersion 21
+            targetSdkVersion 30
+            versionCode 1
+            versionName "1.0"
+
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+    }
+
+    dependencies {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

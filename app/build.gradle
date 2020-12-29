@@ -33,9 +33,10 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
     implementation "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
 
-    implementation project(":navigation")
-
     testImplementation "junit:junit:${versions.junit}"
     androidTestImplementation "androidx.test.ext:junit:${versions.junit}"
     androidTestImplementation "com.kaspersky.android-components:kaspresso:${versions.kaspresso}"
+
+    implementation project(":shared:navigation")
+    implementation project(":feature:splash")
 }

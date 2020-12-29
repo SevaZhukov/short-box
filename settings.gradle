@@ -1,2 +1,3 @@
 include ':app'
-include ':navigation'
+include ':shared:navigation'
+include ':feature:splash'

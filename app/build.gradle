@@ -1,7 +1,5 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     defaultConfig {
@@ -33,10 +31,14 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
     implementation "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
 
+    implementation "com.google.dagger:hilt-android:${versions.hilt}"
+    kapt "com.google.dagger:hilt-android-compiler:${versions.hilt}"
+
     testImplementation "junit:junit:${versions.junit}"
     androidTestImplementation "androidx.test.ext:junit:${versions.junit}"
     androidTestImplementation "com.kaspersky.android-components:kaspresso:${versions.kaspresso}"
 
     implementation project(":shared:navigation")
     implementation project(":feature:splash")
+    implementation project(":feature:main")
 }

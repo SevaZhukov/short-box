@@ -12,6 +12,7 @@ buildscript {
 	dependencies {
 		classpath "com.android.tools.build:gradle:${versions.gradle}"
 		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+		classpath "com.google.dagger:hilt-android-gradle-plugin:${versions.hilt}"
 	}
 }
 
@@ -24,10 +25,8 @@ allprojects {
 
 subprojects {
 	if (project.name == "app") {
-		apply plugin: "com.android.application"
 		apply plugin: AppPlugin
 	} else {
-		apply plugin: "com.android.library"
 		apply plugin: LibraryPlugin
 	}
 

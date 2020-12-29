@@ -1,4 +1,4 @@
-package com.siberiandroid.shortbox.navigation
+package com.siberiandroid.shortbox.shared.navigation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -23,6 +23,18 @@ fun Fragment.navigate(destination: NavDestination, data: Serializable? = null) {
 	val bundle = Bundle().apply { putSerializable(NAVIGATION_DATA, data) }
 
 	navController.navigate(destination.actionId, bundle)
+}
+
+fun Fragment.navigate(actionId: Int, hostId: Int? = null, data: Serializable? = null) {
+	val navController = if (hostId == null) {
+		findNavController()
+	} else {
+		Navigation.findNavController(requireActivity(), hostId)
+	}
+
+	val bundle = Bundle().apply { putSerializable(NAVIGATION_DATA, data) }
+
+	navController.navigate(actionId, bundle)
 }
 
 val Fragment.navigationData: Serializable?

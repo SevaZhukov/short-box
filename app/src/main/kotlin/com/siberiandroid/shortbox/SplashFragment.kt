@@ -1,4 +1,4 @@
-package com.siberiandroid.feature.splash
+package com.siberiandroid.shortbox
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.siberiandroid.feature.splash.SplashViewModel
 
 class SplashFragment : Fragment() {
 

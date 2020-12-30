@@ -2,25 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:id="@+id/navigation_global"
-	app:startDestination="@id/splashFragment">
+	app:startDestination="@id/mainFragment">
 
 	<fragment
 		android:id="@+id/splashFragment"
-		android:name="com.siberiandroid.feature.splash.SplashFragment"
+		android:name="com.siberiandroid.shortbox.SplashFragment"
 		android:label="SplashFragment">
 		<action
-			android:id="@+id/action_splashFragment_to_mainFragment"
+			android:id="@id/action_splashFragment_to_mainFragment"
 			app:destination="@id/mainFragment" />
-		<action
-			android:id="@+id/action_splashFragment_to_MFragment"
-			app:destination="@id/MFragment" />
 	</fragment>
 	<fragment
 		android:id="@+id/mainFragment"
 		android:name="com.siberiandroid.feature.main.MainFragment"
 		android:label="MainFragment" />
-	<fragment
-		android:id="@+id/MFragment"
-		android:name="com.siberiandroid.shortbox.MFragment"
-		android:label="MFragment" />
 </navigation>

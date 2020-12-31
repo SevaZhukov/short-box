@@ -2,11 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:id="@+id/navigation_global"
-	app:startDestination="@id/mainFragment">
+	app:startDestination="@id/splashFragment">
 
 	<fragment
 		android:id="@+id/splashFragment"
-		android:name="com.siberiandroid.shortbox.SplashFragment"
+		android:name="com.siberiandroid.shortbox.feature.splash.presentation.SplashFragment"
 		android:label="SplashFragment">
 		<action
 			android:id="@id/action_splashFragment_to_mainFragment"
@@ -14,6 +14,6 @@
 	</fragment>
 	<fragment
 		android:id="@+id/mainFragment"
-		android:name="com.siberiandroid.feature.main.MainFragment"
+		android:name="com.siberiandroid.shortbox.feature.main.MainFragment"
 		android:label="MainFragment" />
 </navigation>

@@ -8,7 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.siberiandroid.feature.splash.SplashViewModel
+import com.siberiandroid.shortbox.feature.splash.presentation.SplashViewModel
 
 class SplashFragment : Fragment() {
 

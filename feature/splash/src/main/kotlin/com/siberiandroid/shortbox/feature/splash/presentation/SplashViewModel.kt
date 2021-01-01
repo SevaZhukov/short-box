@@ -8,4 +8,8 @@ class SplashViewModel : ViewModel() {
 
 	private val _isNewUser = MutableLiveData<Boolean>()
 	val isNewUser: LiveData<Boolean> = _isNewUser
+
+	init {
+		_isNewUser.value = true
+	}
 }

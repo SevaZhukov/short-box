@@ -17,11 +17,8 @@ dependencies {
     implementation "com.google.dagger:hilt-android:${versions.hilt}"
     kapt "com.google.dagger:hilt-android-compiler:${versions.hilt}"
 
-    testImplementation "junit:junit:${versions.junit}"
-    androidTestImplementation "androidx.test.ext:junit:${versions.junit}"
-    androidTestImplementation "com.kaspersky.android-components:kaspresso:${versions.kaspresso}"
-
     implementation project(":shared:navigation")
     implementation project(":feature:splash")
     implementation project(":feature:main")
+    implementation project(":feature:onboarding")
 }

@@ -11,9 +11,20 @@
 		<action
 			android:id="@id/action_splashFragment_to_mainFragment"
 			app:destination="@id/mainFragment" />
+		<action
+			android:id="@id/action_splashFragment_to_onboardingFragment"
+			app:destination="@id/onboardingFragment" />
 	</fragment>
 	<fragment
 		android:id="@+id/mainFragment"
 		android:name="com.siberiandroid.shortbox.feature.main.MainFragment"
 		android:label="MainFragment" />
+	<fragment
+		android:id="@+id/onboardingFragment"
+		android:name="com.siberiandroid.shortbox.feature.onboarding.OnboardingFragment"
+		android:label="OnboardingFragment" >
+		<action
+			android:id="@id/action_onboardingFragment_to_mainFragment"
+			app:destination="@id/mainFragment" />
+	</fragment>
 </navigation>

@@ -1,7 +1,6 @@
 include ':app'
-include ':shared:navigation'
 include ':feature:splash'
 include ':feature:main'
 include ':feature:onboarding'
-include ':shared:ui'
+include ':shared:navigation'
 include ':shared:preferences'

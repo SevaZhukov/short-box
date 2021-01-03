@@ -1,24 +1,22 @@
-apply plugin: 'dagger.hilt.android.plugin'
-
 android {
-    defaultConfig {
-        applicationId "com.siberiandroid.shortbox"
-    }
+	defaultConfig {
+		applicationId "com.siberiandroid.shortbox"
+	}
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+	}
 }
 
 dependencies {
-    implementation "com.google.dagger:hilt-android:${versions.hilt}"
-    kapt "com.google.dagger:hilt-android-compiler:${versions.hilt}"
+	implementation "androidx.datastore:datastore-preferences:${versions.preferences}"
 
-    implementation project(":shared:navigation")
-    implementation project(":feature:splash")
-    implementation project(":feature:main")
-    implementation project(":feature:onboarding")
+	implementation project(":shared:navigation")
+	implementation project(":shared:preferences")
+	implementation project(":feature:splash")
+	implementation project(":feature:main")
+	implementation project(":feature:onboarding")
 }

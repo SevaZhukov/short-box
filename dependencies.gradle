@@ -11,6 +11,7 @@ ext {
 		"preferences": "1.0.0-alpha05",
 
 		"hilt"       : "2.28-alpha",
+		"hiltAndroid": "1.0.0-alpha01",
 
 		"junit"      : "4.13.1",
 		"kaspresso"  : "1.2.0"

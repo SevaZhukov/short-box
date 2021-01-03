@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.siberiandroid.shortbox.feature.splash.R
 import com.siberiandroid.shortbox.shared.navigation.navigate
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SplashFragment : Fragment() {
 
 	private val viewModel: SplashViewModel by viewModels()

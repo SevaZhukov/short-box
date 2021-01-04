@@ -12,8 +12,6 @@ android {
 }
 
 dependencies {
-	implementation "androidx.datastore:datastore-preferences:${versions.preferences}"
-
 	implementation project(":shared:navigation")
 	implementation project(":shared:preferences")
 	implementation project(":feature:splash")

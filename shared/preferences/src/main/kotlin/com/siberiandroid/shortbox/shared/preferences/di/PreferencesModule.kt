@@ -10,6 +10,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Singleton
 
 @Module
 @InstallIn(ApplicationComponent::class)
@@ -17,6 +18,7 @@ abstract class PreferencesModule {
 
 	companion object {
 
+		@Singleton
 		@Provides
 		fun provideDataStore(@ApplicationContext context: Context) = context.createDataStore("settings")
 	}

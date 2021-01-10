@@ -10,10 +10,12 @@
 		android:label="SplashFragment">
 		<action
 			android:id="@id/action_splashFragment_to_mainFragment"
-			app:destination="@id/mainFragment" />
+			app:destination="@id/mainFragment"
+			app:popUpTo="@id/navigation_global" />
 		<action
 			android:id="@id/action_splashFragment_to_onboardingFragment"
-			app:destination="@id/onboardingFragment" />
+			app:destination="@id/onboardingFragment"
+			app:popUpTo="@id/navigation_global" />
 	</fragment>
 	<fragment
 		android:id="@+id/mainFragment"
@@ -21,10 +23,11 @@
 		android:label="MainFragment" />
 	<fragment
 		android:id="@+id/onboardingFragment"
-		android:name="com.siberiandroid.shortbox.feature.onboarding.OnboardingFragment"
+		android:name="com.siberiandroid.shortbox.feature.onboarding.presentation.OnboardingFragment"
 		android:label="OnboardingFragment" >
 		<action
 			android:id="@id/action_onboardingFragment_to_mainFragment"
-			app:destination="@id/mainFragment" />
+			app:destination="@id/mainFragment"
+			app:popUpTo="@id/navigation_global" />
 	</fragment>
 </navigation>

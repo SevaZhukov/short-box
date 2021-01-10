@@ -4,5 +4,5 @@ import androidx.datastore.preferences.core.preferencesKey
 
 object PreferencesKeys {
 
-	val USERNAME = preferencesKey<String>("username")
+	val ONBOARDING_PASSED = preferencesKey<Boolean>("onboarding_passed")
 }

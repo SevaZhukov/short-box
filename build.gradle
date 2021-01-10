@@ -12,7 +12,6 @@ buildscript {
 	dependencies {
 		classpath "com.android.tools.build:gradle:${versions.gradle}"
 		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
-		classpath "com.google.dagger:hilt-android-gradle-plugin:${versions.hilt}"
 	}
 }
 
@@ -36,8 +35,6 @@ subprojects {
 
 		apply plugin: 'kotlin-android'
 		apply plugin: "kotlin-android-extensions"
-		apply plugin: 'kotlin-kapt'
-		apply plugin: 'dagger.hilt.android.plugin'
 
 		sourceSets {
 			main.java.srcDirs += ["src/main/kotlin"]
@@ -95,10 +92,9 @@ subprojects {
 			implementation "androidx.compose.material:material-icons-extended:${versions.compose}"
 			implementation "androidx.compose.runtime:runtime-livedata:${versions.compose}"
 
-			implementation "com.google.dagger:hilt-android:${versions.hilt}"
-			kapt "com.google.dagger:hilt-android-compiler:${versions.hilt}"
-			implementation "androidx.hilt:hilt-lifecycle-viewmodel:${versions.hiltAndroid}"
-			kapt "androidx.hilt:hilt-compiler:${versions.hiltAndroid}"
+			implementation "org.koin:koin-androidx-scope:${versions.koin}"
+			implementation "org.koin:koin-androidx-viewmodel:${versions.koin}"
+			implementation "org.koin:koin-androidx-fragment:${versions.koin}"
 		}
 	}
 }

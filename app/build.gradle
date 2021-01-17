@@ -12,7 +12,6 @@ android {
 }
 
 dependencies {
-	implementation project(":shared:navigation")
 	implementation project(":shared:preferences")
 	implementation project(":feature:splash")
 	implementation project(":feature:main")

@@ -1,4 +1,3 @@
 dependencies {
-	implementation project(":shared:navigation")
 	implementation project(":shared:preferences")
 }

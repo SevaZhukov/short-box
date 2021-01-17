@@ -10,7 +10,6 @@ import androidx.navigation.compose.rememberNavController
 import com.siberiandroid.shortbox.feature.main.Main
 import com.siberiandroid.shortbox.feature.onboarding.presentation.Onboarding
 import com.siberiandroid.shortbox.feature.splash.presentation.Splash
-import org.koin.androidx.compose.getViewModel
 
 object GlobalDestinations {
 

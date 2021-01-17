@@ -5,7 +5,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 @Composable
-fun Main() {
+fun MainScreen() {
 	MaterialTheme {
 		Text(text = "Main")
 	}

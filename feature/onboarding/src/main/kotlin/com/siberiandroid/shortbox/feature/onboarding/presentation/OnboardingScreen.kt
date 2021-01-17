@@ -9,7 +9,7 @@ import androidx.compose.runtime.livedata.observeAsState
 import org.koin.androidx.compose.getViewModel
 
 @Composable
-fun Onboarding(
+fun OnboardingScreen(
 	navigateToMain: () -> Unit,
 	viewModel: OnboardingViewModel = getViewModel()
 ) {

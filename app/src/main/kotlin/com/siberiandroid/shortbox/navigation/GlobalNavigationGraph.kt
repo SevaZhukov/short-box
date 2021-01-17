@@ -6,9 +6,9 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.siberiandroid.shortbox.feature.main.Main
-import com.siberiandroid.shortbox.feature.onboarding.presentation.Onboarding
-import com.siberiandroid.shortbox.feature.splash.presentation.Splash
+import com.siberiandroid.shortbox.feature.main.MainScreen
+import com.siberiandroid.shortbox.feature.onboarding.presentation.OnboardingScreen
+import com.siberiandroid.shortbox.feature.splash.presentation.SplashScreen
 
 object GlobalDestinations {
 
@@ -31,13 +31,13 @@ fun GlobalNavigationGraph() {
 
 	NavHost(navController, GlobalDestinations.SPLASH) {
 		composable(GlobalDestinations.SPLASH) {
-			Splash(actions.navigateToMain, actions.navigateToOnboarding)
+			SplashScreen(actions.navigateToMain, actions.navigateToOnboarding)
 		}
 		composable(GlobalDestinations.ONBOARDING) {
-			Onboarding(actions.navigateToMain)
+			OnboardingScreen(actions.navigateToMain)
 		}
 		composable(GlobalDestinations.MAIN) {
-			Main()
+			MainScreen()
 		}
 	}
 }

@@ -4,19 +4,19 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.siberiandroid.shortbox.feature.splash.domain.IsNewUserUceCase
+import com.siberiandroid.shortbox.feature.splash.domain.IsOnboardingPassedUceCase
 import kotlinx.coroutines.launch
 
 class SplashViewModel(
-	private val isNewUserUceCase: IsNewUserUceCase
+	private val isOnboardingPassedUceCase: IsOnboardingPassedUceCase
 ) : ViewModel() {
 
-	private val _isNewUser = MutableLiveData<Boolean>()
-	val isNewUser: LiveData<Boolean> = _isNewUser
+	private val _isOnboardingPassed = MutableLiveData<Boolean>()
+	val isOnboardingPassed: LiveData<Boolean> = _isOnboardingPassed
 
 	init {
 		viewModelScope.launch {
-			_isNewUser.value = isNewUserUceCase()
+			_isOnboardingPassed.value = isOnboardingPassedUceCase()
 		}
 	}
 }

@@ -12,8 +12,8 @@ class SplashFragment : Fragment() {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		viewModel.isNewUser.observe(this) {
-			if (it) {
+		viewModel.isOnboardingPassed.observe(this) {
+			if (!it) {
 				navigate(R.id.action_splashFragment_to_onboardingFragment)
 			} else {
 				navigate(R.id.action_splashFragment_to_mainFragment)

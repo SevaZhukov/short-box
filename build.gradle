@@ -83,6 +83,7 @@ subprojects {
 
 			implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
 			implementation "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+			implementation "androidx.navigation:navigation-compose:${versions.navigationCompose}"
 
 			implementation "androidx.compose.ui:ui:${versions.compose}"
 			implementation "androidx.compose.ui:ui-tooling:${versions.compose}"
@@ -94,7 +95,7 @@ subprojects {
 
 			implementation "org.koin:koin-androidx-scope:${versions.koin}"
 			implementation "org.koin:koin-androidx-viewmodel:${versions.koin}"
-			implementation "org.koin:koin-androidx-fragment:${versions.koin}"
+			implementation "org.koin:koin-androidx-compose:${versions.koin}"
 		}
 	}
 }
